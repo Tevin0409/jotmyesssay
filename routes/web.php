@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +13,7 @@
 Route::get('/', function () {
     return view('landing/landing');
 });
-Route::get('/order', function(){
-    return view ('landing/order');
-});
+Route::resource('/order','OrderContoller');
 
 Route::get('/about', function () {
     return view('about');
