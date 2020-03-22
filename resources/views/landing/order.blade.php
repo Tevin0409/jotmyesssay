@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <!--==========================
+<!--==========================
 Header Section
 ============================-->
 <header id="header">
@@ -67,6 +67,8 @@ Header Section
     </div>
 </header>
 <!-- #header -->
+{!! Form::open(['action'=>'OrderContoller@store','method' => 'POST']) !!}
+<div class='form-group form-group col-sm-12 card card-block'>
 
     <section id="order">
         <div class=" container wow fadeInUp">
@@ -350,10 +352,15 @@ Header Section
 
 <script src="{{asset('landing/contactform/contactform.js')}}"></script>
 
+<<<<<<< HEAD
 {{-- Form Calculator JavaScript Files --}}
 <script src="{{asset('landing/js/price.js')}}"></script>
     
     
     
+=======
+
+
+>>>>>>> ee5f6b69650125448af420a97cd42d6d55b9e353
 </body>
 </html>
