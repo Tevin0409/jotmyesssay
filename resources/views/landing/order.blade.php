@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +78,7 @@ Header Section
                 </div>
             </div>
         </div>
-        <div class="container about-container wow fadeInUp">
+        <form method="GET" action="#" class="container about-container wow fadeInUp">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row form-group col-sm-12" >
@@ -91,22 +90,20 @@ Header Section
                         <div class="col-sm-8">
                             <div class="btn-group row" data-toggle="buttons">
                                 <label class="btn btn-default">
-                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="1#High School">High School
-                            </label>
-                            <label class="btn btn-default">
-                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="1.13#Undergraduate">Undergraduate
-                            </label>
-                            <label class="btn btn-default">
-                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="1.3#Masters" checked="">Masters
-                            </label>
-                            <label class="btn btn-default active">
-                            <input type="radio" name="ops_aclevel" id="ops_aclevel" value="1.5#PhD">PhD
-                            </label>
-                    
-                        </div>
-                      </div>
-                    </div>
-            
+                                <input type="radio" name="aclevel" id="ops_aclevel" value="HighSchool" onclick="calculateTotal()">High School
+                                </label>
+                                <label class="btn btn-default">
+                                <input type="radio" name="aclevel" id="ops_aclevel" value="Undergraduate" onclick="calculateTotal()">Undergraduate
+                                </label>
+                                <label class="btn btn-default">
+                                <input type="radio" name="aclevel" id="ops_aclevel" value="Masters" onclick="calculateTotal()">Masters
+                                </label>
+                                <label class="btn btn-default active">
+                                <input type="radio" name="aclevel" id="ops_aclevel" value="PhD" onclick="calculateTotal()">PhD
+                                </label>
+                            </div>                        
+                        </div>                      
+                    </div>            
                     <div class="form-group row col-sm-12">
                         <label for="exampleSelect1" class="col-sm-4">Type of Paper</label>
                         <select name="order_tpaper" class="form-control col-sm-8" id="exampleSelect1">
@@ -205,15 +202,15 @@ Header Section
                         <input type="file" class="form-control col-sm-8" title="Upload file">
                     </div>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 pricing">
                     <div class="row form-group col-sm-12" >
                         <h4>Pricing Details</h4>
                     </div>
                     <br>
-                    <div class="form-group col-sm-12 row">
+                    <div class="form-group col-sm-12 row pages">
                         <label class="col-sm-4"> Number of Pages </label>
 
-                        <input type="number" class="col-sm-12 form-control" max="100" min="1">
+                        <input type="number" class="col-sm-12 form-control " id="quantity" max="100" min="1">
                         <br>
                         <br>
                         <br>
@@ -221,12 +218,12 @@ Header Section
                         <div class="col-sm-8 btn-group" style="margin-left:2px;">
                             <div class="row" data-toggle="buttons">
                                 <label class="col-sm-2 btn btn-default active">
-                                    <input type="radio" name="order_citation" value="SingleSpaced" checked="">SingleSpaced
+                                    <input type="radio" onclick="calculateTotal()" name="order_citation" id="citation" value="SingleSpaced" checked="">SingleSpaced
                                     </label>
                                 
                                    
                                 <label class="btn btn-default col-sm-2">
-                                    <input type="radio" name="order_citation" value="DoubleSpaced">DoubleSPaced
+                                    <input type="radio" onclick="calculateTotal()" name="order_citation" id="citation" value="DoubleSpaced">DoubleSPaced
                                 </label>
                             </div>
                         </div>                        
@@ -236,56 +233,51 @@ Header Section
                         <div class=" col-sm-8">
                             <div class="btn-group row" data-toggle="buttons">
                                 <label class="btn btn-default">
-                            <input type="radio" name="currency" id="currency" value="1#USD">USD
-                            </label>
-                            <label class="btn btn-default">
-                            <input type="radio" name="currency" id="currency" value="1.13#GBP">GBP
-                            </label>
-                            <label class="btn btn-default">
-                            <input type="radio" name="currency" id="currency" value="1.3#EUR" checked="">EUR
-                            </label>
-                            <label class="btn btn-default active">
-                            <input type="radio" name="currency" id="currency" value="1.5#KSH">KSH
-                            </label>
-                    
+                                <input type="radio" name="currency" onclick="calculateTotal()" id="currency" value="1#USD">USD
+                                </label>
+                                <label class="btn btn-default">
+                                <input type="radio" name="currency" onclick="calculateTotal()" id="currency" value="1.13#GBP">GBP
+                                </label>
+                                <label class="btn btn-default">
+                                <input type="radio" name="currency" onclick="calculateTotal()" id="currency" value="1.3#EUR" checked="">EUR
+                                </label>
+                                <label class="btn btn-default active">
+                                <input type="radio" name="currency" onclick="calculateTotal()" id="currency" value="1.5#KSH">KSH
+                                </label>
+                            </div>                        
                         </div>
-                      </div>
                     </div>
                     <div class="form-group row col-sm-12">
                         <label for="ppSlides" class="col-sm-4">Power Point Slides</label>
-                        <input type="number" min="1" max="100" name="ppSlides" class="form-control col-sm-8">
+                        <input type="number" min="1" max="100" name="ppSlides" id="ppSlides" class="form-control col-sm-8">
                     </div>
                     <div class="row form-group col-sm-12">
                         <label for="urgency" class="col-sm-4"><strong>Deadline:</strong></label>
-                        <select name="order_deadline" class="form-control col-sm-8" id="exampleSelect1">
-                            <option name="order_deadline" value="14#Days#14">
-                                14 Days </option>
-                            <option name="order_deadline" value="15#Days#10">
-                                10 Days </option>
-                            <option name="order_deadline" value="16#Days#6">
+                        <select name="order_deadline" id="order_deadline" onchange="calculateTotal()" class="form-control col-sm-8" id="exampleSelect1">
+                            <option name="order_deadline" value="12Days">
+                                12 Days </option>
+                            <option name="order_deadline" value="9Days">
+                                9 Days </option>
+                            <option name="order_deadline" value="6Days">
                                 6 Days </option>
-                            <option name="order_deadline" value="27#Hours#18">
-                                18 Hours </option>
-                            <option name="order_deadline" value="30#Hours#12">
-                                12 Hours </option>
-                            <option name="order_deadline" value="35#Hours#6">
-                                6 Hours </option>
-                            <option name="order_deadline" value="45#Hours#3">
-                                3 Hours </option>
-                            <option name="order_deadline" value="16#Hours#7">
-                                7 Hours </option>                       
-                            <option name="order_deadline" value="19#Days#4">
-                                4 Days </option>
-                            <option name="order_deadline" value="12#Days#5">
-                                5 Days </option>
-                            <option name="order_deadline" value="20#Days#3">
-                                3 Days </option>
-                            <option name="order_deadline" value="23#Hours#48">
+                            <option name="order_deadline" value="3days">
+                                3 days </option>
+                            <option name="order_deadline" value="48Hrs">
                                 48 Hours </option>
-                            <option name="order_deadline" value="27#Hours#24">
+                            <option name="order_deadline" value="24Hrs">
                                 24 Hours </option>
-                            <option name="order_deadline" value="33#Hours#8">
-                                8 Hours </option>
+                            <option name="order_deadline" value="18Hrs">
+                                18 Hours </option>
+                            <option name="order_deadline" value="15Hrs">
+                                15 Hours </option>                       
+                            <option name="order_deadline" value="12Hrs">
+                                12 Hours </option>
+                            <option name="order_deadline" value="9Hrs">
+                                9 Hours </option>
+                            <option name="order_deadline" value="6Hrs">
+                                6 Hours </option>
+                            <option name="order_deadline" value="3Hrs">
+                                3 Hours </option>                           
                         </select>
                     </div>
                     <div class="form-group row col-sm-12">
@@ -295,49 +287,50 @@ Header Section
                         
                         
                                 <label class="btn text-center btn-default col-sm-4 active">
-                                <input type="radio" name="order_wquality" value="1#Standard" checked="">
+                                <input type="radio" name="order_wquality" id="wquality" value="Standard" onclick="calculateTotal()">
                         
                                         <h6> Standard </h6><hr>
                                 <small> Standard Price writers</small>
                                 </label>
                                     <label class="btn text-center btn-default col-sm-4 ">
-                                <input type="radio" name="order_wquality" value="1.25#Premium">
+                                <input type="radio" name="order_wquality" id="wquality" onclick="calculateTotal()"value=" Premium">
                         
                                         <h6> Premium </h6><hr>
                                 <small> High-rank professional writer,<br> proficient in <br> the requested field of study</small>
                                 </label>
                                     <label class="btn text-center btn-default col-sm-4 ">
-                                <input type="radio" name="order_wquality" value="1.35#Platinum">
+                                <input type="radio" name="order_wquality" id="wquality" onclick="calculateTotal()" value="Platinum">
                         
                                         <h6> Platinum </h6><hr>
                                 <small>  English as a native <br> language writer <br>(US, UK, CA, AU writers)<br> </small>
                                 </label>
                                 
-                             </div>
-                         </div>
-                  </div>
-                  <div class="form-group row col-sm-12">
-                    <label class="col-sm-4" for="order_title">Preferred writer's ID</label>
-                    <input type="text" name="order_writer" class="form-control col-sm-8 border-default" id="order_prefwriter" aria-describedby="emailHelp" placeholder="optional" value="">
-                  </div>
-                  <div class="form-group row col-sm-12">
-                    <label class="col-sm-4" for="order_title">Additional services</label>
-                    <div class="col-sm-8 addons">
-                
-                            <label class="text-left checkbox" style="width: 100%;" for="Checkbox1">
-                                <input value="10" name="order_upsells[]" type="checkbox" class="addon" data-toggle="checkbox"> VIP support                <p style="float: right"> $10 </p>
-                            </label>
-                             <hr>                      
+                            </div>
+                        </div>
+                    </div>                  
+                    <div class="form-group row col-sm-12">
+                        <label class="col-sm-4" for="order_title">Preferred writer's ID</label>
+                        <input type="text" name="order_writer" class="form-control col-sm-8 border-default" id="order_prefwriter" aria-describedby="emailHelp" placeholder="optional" value="">
                     </div>
-                  </div>
-                  <div class="col-sm-12 form-group">
-                      <button type="submit" class="btn btn-primary">Submit</button>
-
-                  </div>
-
+                    <div class="form-group row col-sm-12">
+                        <label class="col-sm-4" for="order_title">Additional services</label>
+                        <div class="col-sm-8 addons">
                     
+                                <label class="text-left checkbox" style="width: 100%;" for="Checkbox1">
+                                    <input onclick="calculateTotal()" value="10" name="order_upsells[]" type="checkbox" class="addon" id="vip" data-toggle="checkbox"> VIP support                <p style="float: right"> $10 </p>
+                                </label>
+                                <hr>                      
+                        </div>
+                    </div>                    
+                    <div class="col-sm-12 form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>                                       
                 </div>
             </div>
+        </form>
+        <div id="totalPrice col-sm-12 form-group" style="background:yellow;">
+            
         </div>
     
     </section>
@@ -356,6 +349,9 @@ Header Section
 <script src="{{asset('landing/js/custom.js')}}"></script>
 
 <script src="{{asset('landing/contactform/contactform.js')}}"></script>
+
+{{-- Form Calculator JavaScript Files --}}
+<script src="{{asset('landing/js/price.js')}}"></script>
     
     
     

@@ -55,15 +55,15 @@ Hero Section
 <section id="hero">
     <div class="hero-container">
         <div class="wow fadeIn">
-            <div class="hero-logo">
-                <img class="" src="{{asset('landing/img/logo.png')}}" alt="Imperial">
-            </div>
+            {{-- <div class="hero-logo">
+                <img class="" src="{{asset('landing/img/logo1.png')}}" alt="Jotmyessay">
+            </div> --}}
 
             <h1>Custom Essay writing</h1>
                  </h1>
             <h2>One-stop solution for scholars in need of <span class="rotating">creative writings,essay help, powerful speeches</span></h2>
             <div class="actions">
-                <a href="{{route('portal.register')}}" class="btn-get-started">Register/Login</a>
+                <a href="{{route('registration')}}" class="btn-get-started">Register/Login</a>
                 <a href="#services" class="btn-services">Get started</a>
             </div>
         </div>
@@ -87,13 +87,11 @@ Header Section
                 <li class="menu-active"><a href="#hero">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="menu-has-children"><a href="">Drop Down</a>
+                <li class="menu-has-children">{{ucfirst(Auth()->user()->name)}}
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                    <li><a href="{{url(logout)}}">Log Out</a></li>
+                        {{-- <li class="menu-has-children"><a href="#">Drop Down 2</a>
                             <ul>
                                 <li><a href="#">Deep Drop Down 1</a></li>
                                 <li><a href="#">Deep Drop Down 2</a></li>
@@ -104,7 +102,7 @@ Header Section
                         </li>
                         <li><a href="#">Drop Down 3</a></li>
                         <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li>
+                        <li><a href="#">Drop Down 5</a></li> --}}
                     </ul>
                 </li>
                 <li><a href="#contact">Contact Us</a></li>
@@ -244,25 +242,21 @@ About Section
             <div class="col-md-12">
                 <h3 class="section-title">About Us</h3>
                 <div class="section-title-divider"></div>
-                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
+                <p class="section-description">Drowning in the pool of academic assignments? Catch our lifebuoy and leave your problems to us!</p>
             </div>
         </div>
     </div>
     <div class="container about-container wow fadeInUp">
         <div class="row">
             <div class="col-md-6 col-md-push-6 about-content">
-                <h2 class="about-title">We provide great services and ideass</h2>
+                <h2 class="about-title">We provide great services and ideas</h2>
                 <p class="about-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate
+                    Welcome aboard!<br>
+                    Jotmyessay is a professional team of 600+ hand-picked authors, editors, and proofreaders, available 24/7 and ready to handle any written task across any subject. Our custom essay writing service is in great popularity with the students from all around the globe.
                 </p>
                 <p class="about-text">
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum
-                </p>
-                <p class="about-text">
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                    id est laborum
+                  Dear friend! <br>
+                  Whenever you have a writing emergency, our rescue team is here to provide you with qualitative writing assistance in a matter of hours before the deadline!
                 </p>
             </div>
         </div>
@@ -278,43 +272,37 @@ Services Section
             <div class="col-md-12">
                 <h3 class="section-title">Our Services</h3>
                 <div class="section-title-divider"></div>
-                <p class="section-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                <p class="section-description">With Jotmyessay, your writing help experience is bound to be superior! Let us take care of your order while you take advantage of the following benefits.</p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-desktop"></i></div>
-                <h4 class="service-title"><a href="">Lorem Ipsum</a></h4>
-                <p class="service-description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                <h4 class="service-title"><a href="">100% confidentiality and safety</a></h4>
+                <p class="service-description">Worried about your privacy? Don’t. We protect your order details with SSL Data Encryption and never ask for personal information. Place secure order and pay for it safe with Visa or MasterCard.</p>
             </div>
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-bar-chart"></i></div>
-                <h4 class="service-title"><a href="">Dolor Sitema</a></h4>
-                <p class="service-description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                <h4 class="service-title"><a href="">Money-back guarantee</a></h4>
+                <p class="service-description">Wonder about the refund policy? If the received paper is of poor quality or doesn’t match with provided instructions, a full refund can be requested within the first 14 days since the day of the delivery.
+                </p>
             </div>
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
-                <h4 class="service-title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="service-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-            <div class="col-md-4 service-item">
-                <div class="service-icon"><i class="fa fa-photo"></i></div>
-                <h4 class="service-title"><a href="">Magni Dolores</a></h4>
-                <p class="service-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <h4 class="service-title"><a href="">On schedule delivery</a></h4>
+                <p class="service-description">Afraid to miss the deadline? We do not tolerate lateness and always deliver orders on time. The writing progress is transparent, as every customer can track it by communicating with the writer.</p>
             </div>
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-road"></i></div>
-                <h4 class="service-title"><a href="">Nemo Enim</a></h4>
-                <p class="service-description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                <h4 class="service-title"><a href="">Free revision period</a></h4>
+                <p class="service-description">Afraid the paper will fail to meet your expectations? In case there are non-conformities with the initial instructions, ask us to revise it as many times as needed within the first 14 days since the day of the delivery.</p>
             </div>
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
-                <h4 class="service-title"><a href="">Eiusmod Tempor</a></h4>
-                <p class="service-description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                <h4 class="service-title"><a href="">Money-back guarantee</a></h4>
+                <p class="service-description">Wonder about the refund policy? If the received paper is of poor quality or doesn’t match with provided instructions, a full refund can be requested within the first 14 days since the day of the delivery.</p>
             </div>
-        </div>
-    </div>
 </section>
 
 <!--==========================
@@ -337,7 +325,7 @@ Subscrbe Section
 <!--==========================
 Porfolio Section
 ============================-->
-<section id="portfolio">
+<!-- <section id="portfolio">
     <div class="container wow fadeInUp">
         <div class="row">
             <div class="col-md-12">
@@ -422,7 +410,7 @@ Porfolio Section
 
         </div>
     </div>
-</section>
+</section> -->
 
 <!--==========================
 Testimonials Section
@@ -431,9 +419,9 @@ Testimonials Section
     <div class="container wow fadeInUp">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="section-title">Testimonials</h3>
+                <h3 class="section-title">What our customers say about our writers</h3>
                 <div class="section-title-divider"></div>
-                <p class="section-description">Erdo lide, nora porodo filece, salvam esse se, quod concedimus ses haec dicturum fuisse</p>
+                <p class="section-description">Wonder who will be your paper writer? Meet our best authors and see what customers think of their work!</p>
             </div>
         </div>
 
@@ -447,7 +435,7 @@ Testimonials Section
             </div>
             <div class="col-md-9">
                 <div class="quote">
-                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
+                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> It's a pleasure for me to recommend such an awesome service as Jotmyessay.Ordered three papers here,all in Marketing, all delivered on time. <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
                 </div>
             </div>
         </div>
@@ -455,7 +443,7 @@ Testimonials Section
         <div class="row">
             <div class="col-md-9">
                 <div class="quote">
-                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis architecto beatae. <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
+                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> I didn't have time to write my essay,so I ordered it at Jotmyessay.My writer did an excellent job.Politics is a complicated subject, and this is the only service who responded to my essay topic request. <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
                 </div>
             </div>
             <div class="col-md-3">
@@ -479,7 +467,7 @@ Contact Section
             <div class="col-md-12">
                 <h3 class="section-title">Contact Us</h3>
                 <div class="section-title-divider"></div>
-                <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                <p class="section-description">Feel free to get back to us</p>
             </div>
         </div>
 
@@ -488,17 +476,18 @@ Contact Section
                 <div class="info">
                     <div>
                         <i class="fa fa-map-marker"></i>
-                        <p>A108 Adam Street<br>New York, NY 535022</p>
+                        <p>Springs Appt. 
+                        <br>1st Floor Off Kiambu road</p>
                     </div>
 
                     <div>
                         <i class="fa fa-envelope"></i>
-                        <p>info.gmail.com</p>
+                        <p>mail@jotmyessays.com</p>
                     </div>
 
                     <div>
                         <i class="fa fa-phone"></i>
-                        <p>+1 5589 55488 55s</p>
+                        <p>+254759653512</p>
                     </div>
 
                 </div>
