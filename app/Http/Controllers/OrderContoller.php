@@ -58,6 +58,7 @@ class OrderContoller extends Controller
         $order->vip_support = $request->input('vip_support');
         $order->file = $request->input('file');
         $order->save();
+        
         return redirect('landing/landing');
     }
 
