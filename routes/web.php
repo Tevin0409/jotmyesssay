@@ -1,14 +1,6 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\OrderContoller;
+use Illuminate\Http\Request;
 
 Route::get('login', 'AuthController@index');
 Route::post('post-login', 'AuthController@postLogin'); 
@@ -16,12 +8,10 @@ Route::get('registration', 'AuthController@registration');
 Route::post('post-registration', 'AuthController@postRegistration'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+Route::get('/','AuthController@index');
 
-Route::get('/order', function(){
-    return view ('landing/order');
- });
+Route::resource('/order','OrderContoller');
     
-
 
 // //Landing page routes
 // Route::get('/', function () {

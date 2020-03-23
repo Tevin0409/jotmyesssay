@@ -14,7 +14,7 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('landing/login');
+        return view('landing/index');
     }  
  
     public function registration()
@@ -32,7 +32,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('landing/index');
+            return redirect()->intended('/order');
         }
         return Redirect::to("landing/login")->withSuccess('You have entered invalid credentials');
     }
@@ -49,14 +49,14 @@ class AuthController extends Controller
  
         $check = $this->create($data);
        
-        return Redirect::to("landing/index")->withSuccess('Great! You have Successfully loggedin');
+        return Redirect::to("/order")->withSuccess('Great! You have Successfully loggedin');
     }
      
     public function dashboard()
     {
  
       if(Auth::check()){
-        return view('landing/index');
+        return view('/order');
       }
        return Redirect::to("landing/login")->withSuccess('Opps! You do not have access');
     }

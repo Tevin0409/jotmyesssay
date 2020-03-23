@@ -55,16 +55,16 @@ Hero Section
 <section id="hero">
     <div class="hero-container">
         <div class="wow fadeIn">
-            {{-- <div class="hero-logo">
-                <img class="" src="{{asset('landing/img/logo1.png')}}" alt="Jotmyessay">
-            </div> --}}
+            <div class="hero-logo">
+                <img class="" src="{{asset('landing/img/logo.png')}}" alt="Jotmyessay">
+            </div>
 
             <h1>Custom Essay writing</h1>
                  </h1>
             <h2>One-stop solution for scholars in need of <span class="rotating">creative writings,essay help, powerful speeches</span></h2>
             <div class="actions">
-                <a href="{{route('registration')}}" class="btn-get-started">Register/Login</a>
-                <a href="#services" class="btn-services">Get started</a>
+                <a href="{{url('registration')}}" class="btn-get-started">Register/Login</a>
+                <a href="#services" class="btn-services">Learn More</a>
             </div>
         </div>
     </div>
@@ -77,7 +77,7 @@ Header Section
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="#hero"><img src="{{asset('landing/img/logo.png')}}" alt="" title="" /></a>
+            <a href="#hero"><img src="{{asset('landing/img/logo.png')}}" height="" alt="" title="" /></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Header 1</a></h1>-->
         </div>
@@ -88,23 +88,7 @@ Header Section
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li class="menu-has-children">{{ucfirst(Auth()->user()->name)}}
-                    <ul>
-                    <li><a href="{{url(logout)}}">Log Out</a></li>
-                        {{-- <li class="menu-has-children"><a href="#">Drop Down 2</a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li> --}}
-                    </ul>
-                </li>
+               
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -126,7 +110,7 @@ Header Section
             </div>
         </div>
     </div>
-    <div class="container about-container wow fadeInUp">
+<form class="container about-container wow fadeInUp" action="{{url('registration')}}">
         <div class="row">
             <div class="col-md-12">
                 <div class="col-sm-12">
@@ -229,7 +213,7 @@ Header Section
                 </form>
             </div>
         </div>
-    </div>
+    </form>
 
 </section>
 
@@ -270,7 +254,7 @@ Services Section
     <div class="container wow fadeInUp">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="section-title">Our Services</h3>
+                <h3 class="section-title">How we Work</h3>
                 <div class="section-title-divider"></div>
                 <p class="section-description">With Jotmyessay, your writing help experience is bound to be superior! Let us take care of your order while you take advantage of the following benefits.</p>
             </div>
@@ -278,7 +262,21 @@ Services Section
 
         <div class="row">
             <div class="col-md-4 service-item">
-                <div class="service-icon"><i class="fa fa-desktop"></i></div>
+                <div class="service-icon"><i class="fa fa-shield fa-2x"></i></div>
+                <h4 class="service-title"><a href="">Register with us</a></h4>
+                <p class="service-description">Fill out our registration form and upload your academic credentials
+
+                </p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-edit fa-2x"></i></div>
+                <h4 class="service-title"><a href="">Write a prompt</a></h4>
+                <p class="service-description">Write a short prompt within 20 minutes and submit your application
+
+                </p>
+            </div>
+            <div class="col-md-4 service-item">
+                <div class="service-icon"><i class="fa fa-shield fa-2x"></i></div>
                 <h4 class="service-title"><a href="">100% confidentiality and safety</a></h4>
                 <p class="service-description">Worried about your privacy? Don’t. We protect your order details with SSL Data Encryption and never ask for personal information. Place secure order and pay for it safe with Visa or MasterCard.</p>
             </div>
@@ -295,14 +293,10 @@ Services Section
             </div>
             <div class="col-md-4 service-item">
                 <div class="service-icon"><i class="fa fa-road"></i></div>
-                <h4 class="service-title"><a href="">Free revision period</a></h4>
+                <h4 class="service-title"><a href="">Free revision</a></h4>
                 <p class="service-description">Afraid the paper will fail to meet your expectations? In case there are non-conformities with the initial instructions, ask us to revise it as many times as needed within the first 14 days since the day of the delivery.</p>
             </div>
-            <div class="col-md-4 service-item">
-                <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
-                <h4 class="service-title"><a href="">Money-back guarantee</a></h4>
-                <p class="service-description">Wonder about the refund policy? If the received paper is of poor quality or doesn’t match with provided instructions, a full refund can be requested within the first 14 days since the day of the delivery.</p>
-            </div>
+           
 </section>
 
 <!--==========================
@@ -428,14 +422,15 @@ Testimonials Section
         <div class="row">
             <div class="col-md-3">
                 <div class="profile">
-                    <div class="pic"><img src="{{asset('landing/img/client-1.jpg')}}" alt=""></div>
+                    <div class="pic"><img src="{{asset('landing/img/client-1.png')}}" alt=""></div>
                     <h4>Saul Goodman</h4>
                     <span>Lawless Inc</span>
                 </div>
             </div>
             <div class="col-md-9">
                 <div class="quote">
-                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> It's a pleasure for me to recommend such an awesome service as Jotmyessay.Ordered three papers here,all in Marketing, all delivered on time. <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
+                    <b><img src="{{asset('landing/img/quote_sign_left.png')}}" alt=""></b> There are many things I like about jot my essay writing. First, the payments are rather generous. Second, writing guidelines are clear and precise. Third, there are many payment possibilities and hard work is rewarded with bonuses.
+                    . <small><img src="../../../public/landing/img/quote_sign_right.png" alt=""></small>
                 </div>
             </div>
         </div>
@@ -448,7 +443,7 @@ Testimonials Section
             </div>
             <div class="col-md-3">
                 <div class="profile">
-                    <div class="pic"><img src="{{asset('landing/img/client-2.jpg')}}" alt=""></div>
+                    <div class="pic"><img src="{{asset('landing/img/client-1.png')}}" alt=""></div>
                     <h4>Sara Wilsson</h4>
                     <span>Odeo Inc</span>
                 </div>
@@ -531,17 +526,9 @@ Footer
         <div class="row">
             <div class="col-md-12">
                 <div class="copyright">
-                    &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+                    &copy; Copyright <strong>JotMyEssay</strong>. All Rights Reserved
                 </div>
-                <div class="credits">
-                    <!--
-                      All the links in the footer should remain intact.
-                      You can delete the links only if you purchased the pro version.
-                      Licensing information: https://bootstrapmade.com/license/
-                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
-                    -->
-                    Bootstrap Templates by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
+               
             </div>
         </div>
     </div>
