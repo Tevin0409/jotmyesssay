@@ -54,9 +54,9 @@ Header Section
                                 <li><a href="#">Deep Drop Down 4</a></li>
                                 <li><a href="#">Deep Drop Down 5</a></li>
                             </ul>
-                     </li>                        
+                     </li>
                     </ul>
-                </li> 
+                </li>
                 --}}
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -68,14 +68,15 @@ Header Section
 {!! Form::open(['action'=>'OrderContoller@store','method' => 'POST']) !!}
 <div class='form-group form-group col-sm-12 card card-block'>
 
+
     <div class='form-group form-group col-sm-12 card card-block'>
     {{Form::Label('title',"Academic Level")}}
     </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>
-    {{Form::select('academic_level',[
-'Cats' => ['Academic Level' => 'Highschool','Undergraduate','Master','Phd'],
-])}}
+
+        {{Form::select('academic_level', ['Highschool' => 'Highschool', 'Undergraduate' => 'Undergraduate','Masters'=>'Masters','PhD'=>'PhD'])}}
+
     </div>
     <div class='form-group form-group col-sm-12 card card-block'>
         {{Form::Label('title',"Type of Paper")}}
@@ -83,9 +84,7 @@ Header Section
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
-{{Form::select('paper_type',[
-'Types' => ['Type of Paper' => 'Essay','Articles'],
-])}}
+{{Form::select('paper_type',['Essay' => 'Essay','Articles'=> 'Article'])}}
     </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>
@@ -94,9 +93,7 @@ Header Section
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
-    {{Form::select('subject_area',[
-'Subjects' => ['Type of Paper' => 'Biology','Computer Science'],
-])}}
+    {{Form::select('subject_area',['Biology'=>'Biology','Computer Science'=>'Computer Science'])}}
 
     </div>
 
@@ -119,15 +116,26 @@ Header Section
         {{ Form::number('No_of_pages', '2')}}
     </div>
 
+
+    <div class='form-group form-group col-sm-12 card card-block'>
+        {{Form::Label('title',"No. of Slides")}}
+    </div>
+
+    <div class='form-group form-group col-sm-12 card card-block'>
+
+
+        {{ Form::number('no_of_slides', '2')}}
+    </div>
+
+
+
     <div class='form-group form-group col-sm-12 card card-block'>
         {{Form::Label('title',"Spacing")}}
     </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
-    {{Form::select('spacing',[
-'Spacing' => ['Type of Spacing' => 'Single','Double'],
-])}}
+    {{Form::select('spacing',['Single' => 'Single','Double'=>'Double'])}}
 
     </div>
 
@@ -137,7 +145,21 @@ Header Section
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
-    {{Form::date('deadline', \Carbon\Carbon::now())}}
+        {{Form::select('deadline',[
+
+    '3HRS' => '3HRS',
+    '6HRS' => '6HRS',
+    '9HRS' => '9HRS',
+    '12HRS' => '12HRS',
+    '18HRS' => '18HRS',
+    '24HRS' => '24HRS',
+    '48HRS' => '48HRS',
+    '3days' => '3days',
+    '6days' => '6days',
+    '9days' => '9days',
+    '12days' => '12days'
+])}}
+
     </div>
 
 
@@ -156,9 +178,7 @@ Header Section
     <div class='form-group form-group col-sm-12 card card-block'>
 
 
-        {{Form::select('category',[
-       'category' => ['Type of category' => 'Standard','Premium','Platinum'],
-       ])}}
+        {{Form::select('category',['Standard' => 'Standard','Premium'=>'Premium','Platinum' =>'Platinum'])}}
 
     </div>
 
@@ -172,15 +192,22 @@ Header Section
 
 
     <div class='form-group form-group col-sm-12 card card-block'>
+        {{Form::Label('title',"Additional File")}}
+    </div>
+
+    <div class='form-group form-group col-sm-12 card card-block'>
+
+    {{Form::select('currency',['KSH' => 'KSH','UDS'=>'UDS'])}}
 
 
+    </div>
 
-    {{Form::select('currency',[
-   'currency' => ['Type of currency' => 'KSH','UDS'],
-   ])}}
+    <div class='form-group form-group col-sm-12 card card-block'>
+        {{Form::Label('title'," VIP Support")}}
+    </div>
 
-
-
+    <div class='form-group form-group col-sm-12 card card-block'>
+    {{Form::checkbox('vip_support', 'Vip Support Need')}}
     </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>

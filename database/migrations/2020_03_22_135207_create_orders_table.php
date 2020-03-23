@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->string('academic_level');
             $table->string('paper_type');
+            $table->string('no_of_slides');
             $table->string('subject_area');
             $table->text('topic');
             $table->text('No_of_pages');
@@ -24,6 +25,7 @@ class CreateOrdersTable extends Migration
             $table->text('currency');
             $table->text('deadline');
             $table->text('category');
+            $table->text('amount')->nullable();
             $table->text('instructions');
             $table->text('payment_status')->nullable();
             $table->text('writters_id')->nullable();

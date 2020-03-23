@@ -3,15 +3,17 @@ use App\Http\Controllers\OrderContoller;
 use Illuminate\Http\Request;
 
 Route::get('login', 'AuthController@index');
-Route::post('post-login', 'AuthController@postLogin'); 
+Route::post('post-login', 'AuthController@postLogin');
 Route::get('registration', 'AuthController@registration');
-Route::post('post-registration', 'AuthController@postRegistration'); 
-Route::get('dashboard', 'AuthController@dashboard'); 
+Route::post('post-registration', 'AuthController@postRegistration');
+Route::get('dashboard', 'AuthController@dashboard');
 Route::get('logout', 'AuthController@logout');
 Route::get('/','AuthController@index');
 
 Route::resource('/order','OrderContoller');
-    
+Route::get('/email','OrderContoller@mailsend');
+
+
 
 // //Landing page routes
 // Route::get('/', function () {

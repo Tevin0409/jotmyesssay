@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44abb615-6d10-4d3f-a2f7-5d0a532942ab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderContoller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderContoller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_22_135207_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_22_135207_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/landing/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/landing/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -156,6 +162,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -180,6 +190,8 @@
       <workItem from="1583157048897" duration="3291000" />
       <workItem from="1583931299357" duration="1879000" />
       <workItem from="1584879881002" duration="16458000" />
+      <workItem from="1584966243237" duration="1460000" />
+      <workItem from="1584967998893" duration="13047000" />
     </task>
     <servers />
   </component>
@@ -191,13 +203,17 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584879932747" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1584966248588">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1584968003356">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584966248588" />
-    <state x="380" y="175" key="run.anything.popup" timestamp="1584896151342">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584968003356" />
+    <state x="380" y="175" key="run.anything.popup" timestamp="1584990523695">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584896151342" />
+    <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584990523695" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1584993726804">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741/1366.0.1280.1024@67.27.1299.741" timestamp="1584993726804" />
   </component>
 </project>
