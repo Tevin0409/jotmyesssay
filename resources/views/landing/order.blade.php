@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,11 +42,11 @@ Header Section
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="menu-has-children"><a href="">Drop Down</a>
+                {{-- <li><a href="#team">Team</a></li> --}}
+                {{-- <li class="menu-has-children">{{ucfirst(Auth()->user()->name)}}
                     <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                    <li><a href="{{url(logout)}}">Log Out</a></li>
+                     <li class="menu-has-children"><a href="#">Drop Down 2</a>
                             <ul>
                                 <li><a href="#">Deep Drop Down 1</a></li>
                                 <li><a href="#">Deep Drop Down 2</a></li>
@@ -55,12 +54,10 @@ Header Section
                                 <li><a href="#">Deep Drop Down 4</a></li>
                                 <li><a href="#">Deep Drop Down 5</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                        <li><a href="#">Drop Down 5</a></li>
+                     </li>                        
                     </ul>
-                </li>
+                </li> 
+                --}}
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
@@ -160,7 +157,7 @@ Header Section
 
 
         {{Form::select('category',[
-       'category' => ['Type of category' => 'Standard','Platinum'],
+       'category' => ['Type of category' => 'Standard','Premium','Platinum'],
        ])}}
 
     </div>
