@@ -64,7 +64,7 @@ class OrderContoller extends Controller
         $order->file = $request->input('file');
         $order->no_of_slides = $request->input('no_of_slides');
 
-        $total = self::calculate($request->input('academic_level'),$request->input('spacing'),$request->input('category'),$request->input('deadline'));
+        $total = self::calculate($request->input('academic_level'),$request->input('spacing'),$request->input('category'),$request->input('deadline'),$request->input('No_of_pages'),$request->input('no_of_slides'));
         $order->amount = $total;
 
         $order->save();
@@ -128,28 +128,29 @@ class OrderContoller extends Controller
     }
 
 
-    public static  function calculate($acd,$spac,$cate,$deadline){
+    public static  function calculate($acd,$spac,$cate,$dead,$pages,$slides){
 
         $academic = array("Highschool"=>1.0,"Undergraduate"=>1.3,"Masters"=>1.6,"PhD"=>2.0);
         $spacing =array("Double"=>2.0,"Single"=>2.0);
         $category = array("Standard"=>1,"Premium"=>1.35,"Platinum"=>1.35);
         $deadline = array(
-            "3HRS" => 45,
-            "6HRS" => 40,
-            "9HRS" => 35,
-            "12HRS" => 30,
-            "15HRS" => 29,
-            "18HRS" => 27,
-            "24HRS" => 25,
-            "48HRS" => 24,
-            "3days" => 23,
-            "6days" => 21,
-            "9days" => 18,
-            "12days" => 15
+            "3HRS" => 45.0,
+            "6HRS" => 40.0,
+            "9HRS" => 35.0,
+            "12HRS" => 30.0,
+            "15HRS" => 29.0,
+            "18HRS" => 27.0,
+            "24HRS" => 25.0,
+            "48HRS" => 24.0,
+            "3days" => 23.0,
+            "6days" => 21.0,
+            "9days" => 18.0,
+            "12days" => 15.0
 
         );
-        $total = $academic[$acd] + $spacing[$spac]+$category[$cate]+[$deadline];
+        $total = $academic[$acd] + $spacing[$spac]+$category[$cate]+$deadline[$dead];
+        $final = $total*$pages*$slides;
 
-        return $total;
+        return $final;
     }
 }
