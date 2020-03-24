@@ -65,13 +65,14 @@ Header Section
     </div>
 </header>
 <!-- #header -->
+
 {!! Form::open(['action'=>'OrderContoller@store','method' => 'POST']) !!}
 <div class='form-group form-group col-sm-12 card card-block'>
 
 
     <div class='form-group form-group col-sm-12 card card-block'>
     {{Form::Label('title',"Academic Level")}}
-    </div>
+<section id="order">
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
@@ -82,14 +83,17 @@ Header Section
         {{Form::Label('title',"Type of Paper")}}
     </div>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
 
+        <div class='form-group form-group col-sm-12 card card-block'>
 {{Form::select('paper_type',['Essay' => 'Essay','Articles'=> 'Article'])}}
     </div>
+            <div class='form-group form-group col-sm-12 card card-block'>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"Subject Area")}}
-    </div>
+            </div>
+
+            <div class='form-group form-group col-sm-12 card card-block'>
+                {{Form::Label('title',"Subject Area")}}
+            </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
@@ -99,22 +103,12 @@ Header Section
 
 
 
+            <div class='form-group form-group col-sm-12 card card-block'>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
+            {{ Form::text('topic','',['class'=>'form-control','placeholder'=> 'topic'])}}
 
-    {{ Form::text('topic','',['class'=>'form-control','placeholder'=> 'topic'])}}
+            </div>
 
-    </div>
-
-    <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"No. of Pages")}}
-    </div>
-
-    <div class='form-group form-group col-sm-12 card card-block'>
-
-
-        {{ Form::number('No_of_pages', '2')}}
-    </div>
 
 
     <div class='form-group form-group col-sm-12 card card-block'>
@@ -123,28 +117,34 @@ Header Section
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
-
         {{ Form::number('no_of_slides', '2')}}
     </div>
 
-
-
     <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"Spacing")}}
+        {{Form::Label('title',"No. of Pages")}}
     </div>
 
     <div class='form-group form-group col-sm-12 card card-block'>
+                {{ Form::number('No_of_pages', '2')}}
+            </div>
+
+
+            <div class='form-group form-group col-sm-12 card card-block'>
+                {{Form::Label('title',"Spacing")}}
+            </div>
+
+    <div class='form-group form-group col-sm-12 card card-block'>
+
 
     {{Form::select('spacing',['Single' => 'Single','Double'=>'Double'])}}
-
     </div>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"Deadline")}}
-    </div>
+        <div class='form-group form-group col-sm-12 card card-block'>
+            {{Form::Label('title',"Deadline")}}
+        </div>
+
 
     <div class='form-group form-group col-sm-12 card card-block'>
-
         {{Form::select('deadline',[
 
     '3HRS' => '3HRS',
@@ -162,43 +162,41 @@ Header Section
 
     </div>
 
+        <div class='form-group form-group col-sm-12 card card-block'>
+            {{Form::Label('title',"Additional File")}}
+        </div>
+        <div class='form-group form-group col-sm-12 card card-block'>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"Additional File")}}
-    </div>
-    <div class='form-group form-group col-sm-12 card card-block'>
+            {{Form::file("file", $attributes = [])}}
+        </div>
 
-        {{Form::file("file", $attributes = [])}}
-    </div>
-
-    <div class='form-group form-group col-sm-12 card card-block'>
-        {{Form::Label('title',"Writer Category")}}
-    </div>
-
-    <div class='form-group form-group col-sm-12 card card-block'>
-
-
-        {{Form::select('category',['Standard' => 'Standard','Premium'=>'Premium','Platinum' =>'Platinum'])}}
-
-    </div>
+        <div class='form-group form-group col-sm-12 card card-block'>
+            {{Form::Label('title',"Writer Category")}}
+        </div>
 
         <div class='form-group form-group col-sm-12 card card-block'>
 
+        {{Form::select('category',['Standard' => 'Standard','Premium'=>'Premium','Platinum' =>'Platinum'])}}
 
-        {{Form::textarea('instructions','',['class'=>'form-control','placeholder'=> 'Additional Information'])}}
+        </div>
 
-    </div>
+            <div class='form-group form-group col-sm-12 card card-block'>
+
+
+            {{Form::textarea('instructions','',['class'=>'form-control','placeholder'=> 'Additional Information'])}}
+
+        </div>
 
 
 
     <div class='form-group form-group col-sm-12 card card-block'>
         {{Form::Label('title',"Additional File")}}
     </div>
+        <div class='form-group form-group col-sm-12 card card-block'>
 
     <div class='form-group form-group col-sm-12 card card-block'>
 
     {{Form::select('currency',['KSH' => 'KSH','UDS'=>'UDS'])}}
-
 
     </div>
 
@@ -210,12 +208,15 @@ Header Section
     {{Form::checkbox('vip_support', 'Vip Support Need')}}
     </div>
 
-    <div class='form-group form-group col-sm-12 card card-block'>
 
-    {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
-    </div>
-{!! Form::close() !!}
-</div>
+        <div class='form-group form-group col-sm-12 card card-block'>
+
+        {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
+        </div>
+
+    {!! Form::close() !!}}}
+
+
 <!-- Required JavaScript Libraries -->
 <script src="{{asset('landing/lib/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('landing/lib/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -234,5 +235,9 @@ Header Section
 
 
 
+</div>
+</section>
+</div>
+</div>
 </body>
 </html>

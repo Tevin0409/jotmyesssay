@@ -2,6 +2,8 @@
 
 return [
 
+        
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -176,6 +178,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Models\EventServiceProvider::class,
         App\Models\RouteServiceProvider::class,
+
+        // Srmklive\PayPal\Providers\PayPalServiceProvider::class,
 
     ],
 
