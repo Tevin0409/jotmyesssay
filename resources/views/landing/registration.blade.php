@@ -42,7 +42,7 @@
                                     <input type="text" class="form-control form-control-user"name="name" id="inputName" placeholder="First Name">
                                 
                                     @if ($errors->has('name'))
-                                     <span class="error">{{ $errors->first('name') }}</span>
+                                     <span class="error">{{ '*'.$errors->first('name') }}</span>
                                     @endif 
                                 
                                 </div>
@@ -54,7 +54,7 @@
                                 <input type="email" class="form-control form-control-user" id="inputEmail" name="email" placeholder="Email Address">
                             
                                 @if ($errors->has('email'))
-                                <span class="error">{{ $errors->first('email') }}</span>
+                                <span class="error">{{'*'.$errors->first('email') }}</span>
                                 @endif
                             
                             </div>
@@ -65,7 +65,7 @@
 
 
                                     @if ($errors->has('password'))
-                                    <span class="error">{{ $errors->first('password') }}</span>
+                                    <span class="error">{{ '*'.$errors->first('password') }}</span>
                                     @endif 
                                 </div>                                
                             </div>

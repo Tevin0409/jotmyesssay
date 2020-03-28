@@ -15,6 +15,10 @@ class AuthController extends Controller
     public function index()
     {
         return view('landing/index');
+    } 
+    public function login()
+    {
+        return view('landing/login');
     }  
  
     public function registration()

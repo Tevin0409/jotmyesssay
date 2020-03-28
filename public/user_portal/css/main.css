@@ -11645,7 +11645,7 @@ a:focus {
 }
 
 .bg-login-image {
-    background: url("/admin_portal/img/login.jpg");
+    background: url("../../landing/img/login.jpg");
     background-position: center;
     background-size: cover;
 }
